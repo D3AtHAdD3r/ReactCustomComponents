@@ -1,0 +1,54 @@
+
+.colorful-border-box-wrapper{
+    width: 100vw;
+    height:100vh;
+    background-color:azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorful-border-box{
+    width: 500px;
+    height: 300px;
+    // background-color: rgb(211, 99, 55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.colorful-border-box-content{   
+    background-color: bisque;
+    width:98.5%;
+    height:98%;
+    border-radius: inherit;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$marginBorder: -200px;
+.colorful-border-box-spinner{
+    position: absolute;
+    top: $marginBorder;
+    right: $marginBorder;
+    bottom: $marginBorder;
+    left: $marginBorder;
+    animation: rotate 5s linear infinite;
+    transition: background 1.5s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
