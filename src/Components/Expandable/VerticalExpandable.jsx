@@ -2,7 +2,18 @@ import React, { useState, useRef } from 'react';
 import "./VerticalExpandable.scss"
 
 
-const ExpandableVerticalDiv = ({customStyles}) => {
+/* 
+Useage:
+    const styleEx = {
+            border: '1px solid salmon'
+        } 
+
+    <div className='app'>
+        <ExpandableVerticalDiv customStyles={styleEx}></ExpandableVerticalDiv>
+    </div>  
+*/
+
+const ExpandableVerticalDiv = ({ customStyles }) => {
     const [expanded, setExpanded] = useState(false);
     const contentRef = useRef(null);
 
